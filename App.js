@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { createContext, useContext } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 import 'react-native-gesture-handler';
@@ -8,16 +8,18 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { MaterialIcons } from '@expo/vector-icons';
 
 import LoginScreen from './screens/LoginScreen';
 import Screen1 from './screens/Screen1';
 import Screen2 from './screens/Screen2';
 import Screen3 from './screens/Screen3';
+import Screen4 from './screens/DataEntryScreen';
 
 const Drawer = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
+
+const CardsListContext = createContext();
 
 function MainApp() {
   return (
@@ -32,7 +34,7 @@ function TabNavigator() {
     <Tab.Navigator>
         <Tab.Screen
           name="NOVA LEITURA"
-          component={Screen1}
+          component={Screen4}
           options={{
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons name="qrcode-scan" color={color} size={size} />
