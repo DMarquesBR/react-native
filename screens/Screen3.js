@@ -1,20 +1,13 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import { Button, View, Text } from "react-native";
 
-function Screen3({ route }) {
-  const savedData = route.params?.savedData || [];
-
+function Screen3({ navigation }) {
   return (
     <View>
-      <Text>Saved Data:</Text>
-      {savedData.map((data, index) => (
-        <View key={index}>
-          <Text>Box 1: {data.box1}</Text>
-          <Text>Box 2: {data.box2}</Text>
-          <Text>Box 3: {data.box3}</Text>
-          <Text>Box 4: {data.box4}</Text>
-        </View>
-      ))}
+      <Text> Tela 2</Text>
+      <Button
+        title="Ir para Tela 1"
+        onPress={() => navigation.navigate("NOVA LEITURA")}
+      />
     </View>
   );
 }

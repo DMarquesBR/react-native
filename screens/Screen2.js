@@ -1,14 +1,8 @@
-import {Button, View, Text} from 'react-native';
+import { Button, View, Text } from "react-native";
+import ScreenWithCards from "./ScreenWithCards";
 
-function Screen2({ navigation }){
-  return (
-    <View>
-      <Text> Tela 2</Text>
-      <Button
-        title="Ir para Tela 1"
-        onPress={() => navigation.navigate("NOVA LEITURA")} />
-    </View>
-  )
+function Screen2({ navigation }) {
+  return <ScreenWithCards />;
 }
 
 export default Screen2;
