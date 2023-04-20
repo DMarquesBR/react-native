@@ -1,12 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const Card = ({ name, birthdate, documentNumber }) => {
+const Card = ({ name, birthdate, documentNumber,country }) => {
   return (
     <View style={styles.card}>
       <Text style={styles.cardText}>Name: {name}</Text>
       <Text style={styles.cardText}>Birthdate: {birthdate}</Text>
       <Text style={styles.cardText}>Document Number: {documentNumber}</Text>
+      <Text style={styles.cardText}>Country: {country}</Text>
     </View>
   );
 };
